@@ -45,6 +45,12 @@ Hello The Testing Academy
 10
 ```
 
+Explanation:
+
+- `console.log("Hello The Testing Academy");` prints a message to the terminal.
+- `let x = 10;` creates a variable named `x` and stores the value `10`.
+- `console.log(x);` prints the value stored in `x`.
+
 ### `2_Check.js`
 
 ```javascript
@@ -66,8 +72,16 @@ Output:
 ```text
 win32
 x64
-Node Version: v...
+Node Version: v24.15.0
 ```
+
+Explanation:
+
+- `process.platform` returns the operating system platform. On this machine, it prints `win32`.
+- The comments show common platform names for macOS, Windows, and Linux.
+- `process.arch` returns the CPU architecture. On this machine, it prints `x64`.
+- The comments show common architecture values like `x64` and `arm64`.
+- `process.version` returns the installed Node.js version.
 
 ### `3_hotcode.js`
 
@@ -92,6 +106,16 @@ Output:
 Hello
 After 10000 calls: 19999
 ```
+
+Explanation:
+
+- `console.log("Hello");` prints an initial message.
+- `function add(a, b) { return a + b; }` creates a function that adds two values.
+- `let result;` declares a variable to store the answer from each function call.
+- `for (let i = 0; i < 10000; i++)` runs the loop from `0` to `9999`.
+- `result = add(i, i + 1);` calls the `add` function again and again with changing values.
+- After the loop finishes, the final call is `add(9999, 10000)`, so the result is `19999`.
+- The final comment explains that code executed repeatedly can become hot code, which JavaScript engines may optimize.
 
 ## Topics Covered
 
