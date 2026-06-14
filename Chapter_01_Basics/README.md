@@ -1,16 +1,12 @@
 # Chapter 01: Basics
 
-This folder contains beginner JavaScript and Node.js practice files. The examples cover printing output, using variables, checking the Node.js runtime, writing functions, and running repeated code.
+This chapter has small JavaScript programs for beginners. These files help you learn how to print messages, store numbers, check your computer details, create a function, and repeat work using a loop.
 
 ## Files
 
-- `1_Basics.js` - prints a message, creates a variable with `let`, and logs the value.
-- `2_Check.js` - prints the current operating system platform, CPU architecture, and Node.js version.
-- `3_hotcode.js` - defines an `add` function, calls it many times in a loop, and introduces the idea of hot code optimization.
-
-## Prerequisite
-
-Install Node.js before running these files.
+- `1_Basics.js` - shows how to print a message and store a number in a variable.
+- `2_Check.js` - shows how Node.js can tell us details about the computer.
+- `3_hotcode.js` - shows how a function can run many times inside a loop.
 
 ## How to Run
 
@@ -47,9 +43,11 @@ Hello The Testing Academy
 
 Explanation:
 
-- `console.log("Hello The Testing Academy");` prints a message to the terminal.
-- `let x = 10;` creates a variable named `x` and stores the value `10`.
-- `console.log(x);` prints the value stored in `x`.
+- `console.log("Hello The Testing Academy");` tells JavaScript to show the words `Hello The Testing Academy` on the screen.
+- `let x = 10;` creates a small storage box named `x` and puts the number `10` inside it.
+- `console.log(x);` tells JavaScript to open the `x` box and show what is inside. That is why it prints `10`.
+
+Simple example: Think of `x` like a school bag. If you put one book in the bag, the bag is holding that book. Here, `x` is holding the number `10`.
 
 ### `2_Check.js`
 
@@ -77,11 +75,13 @@ Node Version: v24.15.0
 
 Explanation:
 
-- `process.platform` returns the operating system platform. On this machine, it prints `win32`.
-- The comments show common platform names for macOS, Windows, and Linux.
-- `process.arch` returns the CPU architecture. On this machine, it prints `x64`.
-- The comments show common architecture values like `x64` and `arm64`.
-- `process.version` returns the installed Node.js version.
+- `console.log(process.platform);` asks Node.js, "Which operating system is this computer using?" On this computer, the answer is `win32`, which means Windows.
+- `// MAC - DARWIN`, `// WINDOWS - WIN32`, and `// LINUX - LINUX` are comments. Comments are notes for humans. JavaScript does not run them.
+- `console.log(process.arch);` asks Node.js, "What type of computer processor is this?" On this computer, the answer is `x64`.
+- `// x64` and `// arm64` are also comments. They show common processor types.
+- `console.log("Node Version:", process.version);` prints the words `Node Version:` and then shows which Node.js version is installed.
+
+Simple example: This file is like asking your computer three questions: "What system are you?", "What processor do you use?", and "Which Node.js version do you have?"
 
 ### `3_hotcode.js`
 
@@ -109,19 +109,24 @@ After 10000 calls: 19999
 
 Explanation:
 
-- `console.log("Hello");` prints an initial message.
-- `function add(a, b) { return a + b; }` creates a function that adds two values.
-- `let result;` declares a variable to store the answer from each function call.
-- `for (let i = 0; i < 10000; i++)` runs the loop from `0` to `9999`.
-- `result = add(i, i + 1);` calls the `add` function again and again with changing values.
-- After the loop finishes, the final call is `add(9999, 10000)`, so the result is `19999`.
-- The final comment explains that code executed repeatedly can become hot code, which JavaScript engines may optimize.
+- `console.log("Hello");` prints `Hello` on the screen.
+- `function add(a, b) {` creates a function named `add`. A function is like a small machine that does one job.
+- `return a + b;` tells the machine to add `a` and `b`, then give the answer back.
+- `}` closes the function.
+- `let result;` creates an empty storage box named `result`. We will keep the answer inside it.
+- `for (let i = 0; i < 10000; i++) {` starts a loop. A loop repeats work again and again. This loop starts at `0` and stops before `10000`.
+- `result = add(i, i + 1);` uses the `add` function many times. For example, when `i` is `5`, it adds `5 + 6`.
+- `}` closes the loop.
+- `console.log("After 10000 calls:", result);` prints the final answer after the loop finishes.
+- The last comment says that code running many times is called hot code. JavaScript engines may try to make hot code faster.
+
+Simple example: Imagine doing addition practice 10000 times. The computer does that very quickly using the loop.
 
 ## Topics Covered
 
-- `console.log`
-- Variables with `let`
-- Node.js `process` object
-- Functions
-- Loops
-- Basic hot code concept
+- Printing messages with `console.log`
+- Creating variables with `let`
+- Reading computer details with Node.js `process`
+- Writing functions
+- Repeating work with loops
+- Understanding the basic idea of hot code
