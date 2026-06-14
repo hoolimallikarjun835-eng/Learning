@@ -38,6 +38,13 @@ let x = 10;
 console.log(x);
 ```
 
+Output:
+
+```text
+Hello The Testing Academy
+10
+```
+
 ### `2_Check.js`
 
 ```javascript
@@ -52,6 +59,14 @@ console.log(process.arch);
 // arm64
 
 console.log("Node Version:", process.version);
+```
+
+Output:
+
+```text
+win32
+x64
+Node Version: v...
 ```
 
 ### `3_hotcode.js`
@@ -71,24 +86,7 @@ console.log("After 10000 calls:", result);
 //Repeated code which is to be optmized is called hot code and the process of optimizing it is called hot code
 ```
 
-## Example Output
-
-`1_Basics.js`:
-
-```text
-Hello The Testing Academy
-10
-```
-
-`2_Check.js` prints values from your system, for example:
-
-```text
-win32
-x64
-Node Version: v...
-```
-
-`3_hotcode.js`:
+Output:
 
 ```text
 Hello
