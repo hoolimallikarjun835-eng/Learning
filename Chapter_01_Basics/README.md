@@ -28,6 +28,49 @@ node 2_Check.js
 node 3_hotcode.js
 ```
 
+## Code
+
+### `1_Basics.js`
+
+```javascript
+console.log("Hello The Testing Academy");
+let x = 10;
+console.log(x);
+```
+
+### `2_Check.js`
+
+```javascript
+console.log(process.platform);
+
+// MAC - DARWIN
+// WINDOWS - WIN32
+// LINUX - LINUX
+
+console.log(process.arch);
+// x64
+// arm64
+
+console.log("Node Version:", process.version);
+```
+
+### `3_hotcode.js`
+
+```javascript
+console.log("Hello");
+
+function add(a, b) {
+    return a + b;
+}
+let result;
+for (let i = 0; i < 10000; i++) {
+    result = add(i, i + 1);
+}
+console.log("After 10000 calls:", result);
+
+//Repeated code which is to be optmized is called hot code and the process of optimizing it is called hot code
+```
+
 ## Example Output
 
 `1_Basics.js`:
